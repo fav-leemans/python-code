@@ -1,0 +1,12 @@
+# make calcuulaator
+import math
+def opinput():
+  print("1. addition")
+  print("2, subtraction")
+  print("3. multiplication")
+  print("4. division")
+  print("5. mod")
+  print("6. exponential")
+  print("7. factorial")
+  print("8. log")
+  print(input("what operation do you wanna do: "))
