@@ -9,4 +9,55 @@ def opinput():
   print("6. exponential")
   print("7. factorial")
   print("8. log")
-  print(input("what operation do you wanna do: "))
+
+  while True:
+    try:
+      a = int((input("what operation do you wanna do: ")))
+      
+      if not 1 <= a <= 8:
+        raise ValueError
+        
+      return a
+      
+    except ValueError as err:
+      print("put a number 1-8")
+
+a = opinput()
+if a == 1:
+  x = float(input("give an float: "))
+  y = float(input("give another float: "))
+  print(x+y)
+  
+elif a == 2:
+  x = float(input("give an float: "))
+  y = float(input("give another float: "))
+  print(x-y)
+  
+elif a == 3:
+  x = float(input("give an float: "))
+  y = float(input("give another float: "))
+  print(x*y)
+  
+elif a == 4:
+  x = float(input("give an float: "))
+  y = float(input("give another float: "))
+  print(x/y)
+  
+elif a == 5:
+  x = float(input("give an float: "))
+  y = float(input("give another float: "))
+  print(x%y)
+  
+elif a == 6:
+  x = float(input("give an float: "))
+  y = float(input("give another float: "))
+  print(x**y)
+  
+elif a == 7:
+  x = int(input("give an integer: "))
+  print(math.factorial(x))
+  
+elif a == 8:
+  x = float(input("give an number: "))
+  y = float(input("give a base: "))
+  print(math.log(x, y))
